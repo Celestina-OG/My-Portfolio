@@ -3,6 +3,7 @@ import cert1 from "/src/assets/Application Development using Microservice and Se
 import cert2 from "/src/assets/AWS Certified Cloud Practitioner certificate-1.png";
 import cert3 from "/src/assets/AWS Certified Solutions Architect - Associate certificate-1.png";
 import cert4 from "/src/assets/NITDADevOpsAssociate_Badge20230731-33-fskha4-1.png"
+import cert5 from "/src/assets/GCP-ACE.png"
 
 const Certificate = (props) => {
   return (
@@ -21,8 +22,6 @@ const Certificate = (props) => {
     </a>
   )
 }
-
-
 
 const Certification = () => {
   return (
@@ -56,6 +55,13 @@ const Certification = () => {
           h3="Cousera NITDA"
           link="https://www.credly.com/badges/f7547da1-295b-4f7e-be33-ed0873a0682f/public_url"
           />
+
+<Certificate 
+          img={cert5}
+          h2="Google Cloud Certified Associate Cloud Engineer"
+          h3="Google Cloud"
+          link="https://google.accredible.com/eab539c8-2689-415e-aba5-052bac8269a5"
+          />          
 
         </div>
       
