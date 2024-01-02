@@ -37,7 +37,7 @@ const Hero = () => {
             </a>
         </div>
         <button className='border-b-2 w-fit border-transparent hover:border-b-blue-800 font-bold animate-bounce hover:text-white duration-500 bg-gray-800 rounded-md hover:bg-blue-900 px-4 py-2 text-white'>
-         <a href="https://drive.google.com/file/d/1HlkSOOvQhJhwtZICwoZ26OTqJsPQI4qg/view?usp=drivesdk" target='_blank'>MY RESUME</a>
+         <a href="https://drive.google.com/file/d/1EsjkFr4FU1fkMoB5ptXPw9ltwXjtwZLn/view?usp=drive_link" target='_blank'>MY RESUME</a>
         </button>
       </div>
 
