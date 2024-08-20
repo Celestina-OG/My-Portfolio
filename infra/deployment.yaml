@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: folio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: folio
+  template:
+    metadata:
+      labels:
+        app: folio
+    spec:
+      containers:
+        - name: folio
+          image: celestina16/portfolio-amd64:latest
+          ports:
+            - containerPort: 80
+      # imagePullSecrets:
+      #   - name: argocd-docker-credentials

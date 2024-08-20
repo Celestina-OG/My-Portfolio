@@ -31,12 +31,6 @@ const Header = () => {
   return (
     <header className='flex justify-between items-center md:px-10 px-4 py-6 shadow-md relative'>
 
-        <div className="logo">
-            <a href="#" className='font-bold text-xl text-gray-600'>
-                {"<CELESTINA />"}
-            </a>
-        </div>
-
         <nav className='text-gray-500'>
             <ul data-aos="zoom-in" className={`hidden md:flex flex-col z-50 items-center justify-between md:flex-row md:space-x-8 absolute md:static right-0 top-0 space-y-6 text-center md:space-y-0 shadow-md h-[50vh] mt-[5rem] md:mt-0 md:h-auto md:shadow-[0] p-8 md:p-0 bg-white border md:border-0`}>
                 <li className='border-b-2 border-transparent hover:border-b-blue-800 hover:text-black duration-500'>
