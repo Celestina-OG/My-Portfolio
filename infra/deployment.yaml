@@ -14,10 +14,11 @@ spec:
       labels:
         app: folio
     spec:
+      imagePullSecrets:
+        - name: argocd-docker-credentials
       containers:
         - name: folio
           image: celestina16/portfolio-amd64:latest
           ports:
             - containerPort: 80
-      # imagePullSecrets:
-      #   - name: argocd-docker-credentials
+ 
