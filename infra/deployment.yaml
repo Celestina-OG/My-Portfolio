@@ -18,7 +18,7 @@ spec:
         - name: argocd-docker-credentials
       containers:
         - name: folio
-          image: celestina16/portfolio-amd64:latest
+          image: celestina16/portfolio:amd64
           ports:
             - containerPort: 80
  
