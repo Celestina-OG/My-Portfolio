@@ -1,0 +1,32 @@
+name: Deploy to GCP Cloud Run
+
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up gcloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Configure Docker for Google Artifact Registry
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/test/my-app:${{ github.sha }} .
+          docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/test/my-app:${{ github.sha }}
+
